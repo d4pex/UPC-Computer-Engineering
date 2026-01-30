@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mou-te+</title>
+  <link rel="icon" href="img/moute.png" type="image/x-icon"/>
+  <link rel="stylesheet" href="css/estils.css"/>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="nav-left">
+        <a href="#">Inici</a>
+        <a href="mailto:moutemess@gmail.com">Contacte</a>
+      </div>
+      <div class="nav-right">
+        <a href="html/login.html">Iniciar Sessió</a>
+        <a href="html/registre.html">Registre</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div style="height: 700px;"></div> <!-- Espai per a l'animació de scroll --> 
+    <!-- Secció Qui som -->
+    <section class="section fade-in" id="qui-som">
+      <h1>Benvingut a Mou-te+</h1>
+      <p class="descripcio-inici">Mou-te+ és una plataforma creada per ajudar-te a mantenir-te en forma i cuidar de la teva salut de manera fàcil i centralitzada.
+        En un sol lloc hi trobaràs tot el que necessites: classes dirigides, fisioterapeutes, nutricionistes i centres esportius entre d'altres.
+        Descobreix una nova manera de tenir cura de tu mateix, amb serveis adaptats a les teves necessitats i al teu ritme de vida.</p>
+      <a href="html/login.html" class="btn-comenca">Comença</a>
+    </section>
+
+    <!-- Característiques -->
+    <section class="caracteristiques fade-in-left" id="serveis">
+        <h2>Què t'oferim</h2>
+        <div class="grid-caracteristiques">
+          <div class="caracteristica">
+            <img src="img/personalCualificat.jpeg" alt="Professionals" />
+            <h3>Professionals qualificats</h3>
+            <p>Troba fisioterapeutes, entrenadors i nutricionistes experts a la teva disposició.</p>
+          </div>
+          <div class="caracteristica">
+            <img src="img/reserva-facil.png" alt="Reserva ràpida" />
+            <h3>Reserva fàcil</h3>
+            <p>Reserva els teus serveis de forma ràpida i còmoda, en pocs clics.</p>
+          </div>
+          <div class="caracteristica">
+            <img src="img/seguiment-personalitzat.jpeg" alt="Seguiment personalitzat" />
+            <h3>Seguiment personalitzat</h3>
+            <p>Fes un seguiment del teu progrés i obtén recomanacions adaptades.</p>
+          </div>
+          <div class="caracteristica">
+            <img src="img/centralitzat.png" alt="Tot en un lloc" />
+            <h3>Tot en un lloc</h3>
+            <p>Centralitza tots els teus serveis de salut i esport en una sola plataforma.</p>
+          </div>
+        </div>
+      </section>
+      
+
+    <!-- Contacte o informació addicional -->
+    <section class="section fade-in-left" id="contacte">
+      <h2>Vols contactar amb nosaltres?</h2>
+      <p>Escriu-nos a <a href="mailto:moutemess@gmail.com">moutemess@gmail.com</a> i et respondrem el més aviat possible.</p>
+    </section>
+  </main>
+
+  <!-- Peu de pàgina -->
+  <footer>
+    <p>&copy; 2025 Mou-te+. Tots els drets reservats.</p>
+    <p><a href="#">Política de privacitat</a> | <a href="#">Termes i condicions</a></p>
+  </footer>
+
+  <script>
+    // Animacions al fer scroll
+    const observers = document.querySelectorAll('.fade-in, .fade-in-left');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    observers.forEach(section => io.observe(section));
+  </script>
+</body>
+</html>

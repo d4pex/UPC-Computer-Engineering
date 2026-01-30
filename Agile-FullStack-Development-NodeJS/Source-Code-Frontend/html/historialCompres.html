@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historial de Compres</title>
+    <link rel="icon" href="../img/moute.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/estils.css">
+</head>
+<body class="body-cataleg">
+<header>
+        <nav class="navbar">
+            <div class="nav-left">
+                <a href="dashboard.html">Inici</a>
+                <div class="dropdown">
+                  <a href="#" class="dropbtn">Serveis<span class="arrow">&#9660;</span></a>
+                  <div class="dropdown-content">
+                      <a href="seleccioPla.html">Selecció Pla</a>
+                      <a href="altaServei.html">Crea Servei</a>
+                      <a href="modificaServei.html">Modifica Servei</a>
+                      <a href="veureReserves.html">Reserves</a>
+                      <a href="visualitzacioServeis.html">Visualitzar Serveis</a>
+                  </div>
+                </div>
+                <a href="mailto:moutemess@gmail.com">Contacte</a>
+                <a href="valoracions.html">Valoracions</a>
+                <div class="dropdown">
+                    <a href="#" class="dropbtn">Gamificació i Comunitat<span class="arrow">&#9660;</span></a>
+                    <div class="dropdown-content">
+                        <a href="reptesDisponibles.html">Reptes Disponibles</a>
+                        <a href="reptesInscrits.html">Els meus Reptes</a>
+                        <a href="insignies.html">Les meves insignies</a>
+                    </div>
+                </div>
+                <a href="navegacioCataleg.html">Càtaleg</a>
+            </div>
+            <div class="nav-right">
+                <div class="credits-container">
+                    <img src="../img/credits-logo.png" alt="Logo de crèdits" class="credits-logo">
+                    <span id="creditos">0</span> <!-- Aquí se mostrarán los créditos -->
+                </div>
+                <a href="compraCredits.html">Compra Crèdits</a>
+                
+                <div class="dropdown">
+                    <a href="#" class="dropbtn">Perfil <span class="arrow">&#9660;</span></a> <!-- Flecha hacia abajo -->
+                    <div class="dropdown-content">
+                        <a href="perfil.html">Mi Perfil</a>
+                        <a href="historialCompres.html">Historial de Compres</a>
+                        <a href="logout.html">Tancar Sessió</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content" style="margin-top: 100px;">
+        <h1 class="page-title">Historial de Compres</h1>
+        <p>Aquí pots veure les teves transaccions de compra de crèdits.</p>
+
+        <div id="historial-list" class="packs-container"></div> <!-- Aquí se llenarán las transacciones -->
+
+        <!-- Notificación de error o éxito -->
+        <div id="notification-historial" class="notification"></div>
+    </main>
+
+    <script src="../js/consultaCredits.js" defer></script>
+    <script src="../js/historialCompres.js" defer></script>
+</body>
+</html>

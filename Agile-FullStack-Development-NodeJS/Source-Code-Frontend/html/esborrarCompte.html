@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esborrar Compte - Mou-te+</title>
+    <link rel="icon" href="../img/moute.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/estils.css">
+</head>
+<body>
+    <div id="message" style="display: none; padding: 10px; text-align: center; font-weight: bold;"></div>
+    <div class="delete-account-container">
+        <h2>Esborrar compte</h2>
+        <p>Estàs segur que vols esborrar el teu compte? Aquesta acció és irreversible.</p>
+        <form id="deleteAccountForm">
+            <div class="form-group">
+                <label for="password">Introdueix la teva contrasenya per confirmar:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit" class="btn btn-danger">Esborrar compte</button>
+        </form>
+        <p><a href="perfil.html">Cancel·lar</a></p>
+    </div>
+    <script src="../js/esborrarCompte.js"></script>
+</body>
+</html>

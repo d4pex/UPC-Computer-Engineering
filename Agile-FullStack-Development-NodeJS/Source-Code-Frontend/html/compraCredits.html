@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compra Crèdits</title>
+    <link rel="icon" href="../img/moute.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/estils.css">
+</head>
+<body>
+<header>
+        <nav class="navbar">
+            <div class="nav-left">
+                <a href="dashboard.html">Inici</a>
+                <div class="dropdown">
+                  <a href="#" class="dropbtn">Serveis<span class="arrow">&#9660;</span></a>
+                  <div class="dropdown-content">
+                      <a href="seleccioPla.html">Selecció Pla</a>
+                      <a href="altaServei.html">Crea Servei</a>
+                      <a href="modificaServei.html">Modifica Servei</a>
+                      <a href="veureReserves.html">Reserves</a>
+                      <a href="visualitzacioServeis.html">Visualitzar Serveis</a>
+                  </div>
+                </div>
+                <a href="mailto:moutemess@gmail.com">Contacte</a>
+                <a href="valoracions.html">Valoracions</a>
+                <div class="dropdown">
+                    <a href="#" class="dropbtn">Gamificació i Comunitat<span class="arrow">&#9660;</span></a>
+                    <div class="dropdown-content">
+                        <a href="reptesDisponibles.html">Reptes Disponibles</a>
+                        <a href="reptesInscrits.html">Els meus Reptes</a>
+                        <a href="insignies.html">Les meves insignies</a>
+                    </div>
+                </div>
+                <a href="navegacioCataleg.html">Càtaleg</a>
+            </div>
+            <div class="nav-right">
+                <div class="credits-container">
+                    <img src="../img/credits-logo.png" alt="Logo de crèdits" class="credits-logo">
+                    <span id="creditos">0</span> <!-- Aquí se mostrarán los créditos -->
+                </div>
+                <a href="compraCredits.html">Compra Crèdits</a>
+                
+                <div class="dropdown">
+                    <a href="#" class="dropbtn">Perfil <span class="arrow">&#9660;</span></a> <!-- Flecha hacia abajo -->
+                    <div class="dropdown-content">
+                        <a href="perfil.html">Mi Perfil</a>
+                        <a href="historialCompres.html">Historial de Compres</a>
+                        <a href="logout.html">Tancar Sessió</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="page-title">Compra Crèdits</h1>
+        <p>Aquí pots comprar crèdits per utilitzar els nostres serveis.</p>
+
+        <div class="packs-container">
+            <div class="pack">
+                <img src="../img/credits-logo.png" alt="Paquet de crèdits">
+                <h3>MiniPack</h3>
+                <p>20 crèdits</p>
+                <p class="price">€2.5</p>
+                <button class="button" onclick="redirigirPagament(20)">Comprar</button>
+            </div>
+
+            <div class="pack">
+                <img src="../img/credits-logo.png" alt="Paquet de crèdits">
+                <h3>Essencial</h3>
+                <p>50 crèdits</p>
+                <p class="price">€5</p>
+                <button class="button" onclick="redirigirPagament(50)">Comprar</button>
+            </div>
+
+            <div class="pack">
+                <img src="../img/credits-logo.png" alt="Paquet de crèdits">
+                <h3>Estàndard</h3>
+                <p>100 crèdits</p>
+                <p class="price">€9</p>
+                <button class="button" onclick="redirigirPagament(100)">Comprar</button>
+            </div>
+
+            <div class="pack">
+                <img src="../img/credits-logo.png" alt="Paquet de crèdits">
+                <h3>Avançat</h3>
+                <p>150 crèdits</p>
+                <p class="price">€12</p>
+                <button class="button" onclick="redirigirPagament(150)">Comprar</button>
+            </div>
+
+            <div class="pack">
+                <img src="../img/credits-logo.png" alt="Paquet de crèdits">
+                <h3>Pro</h3>
+                <p>250 crèdits</p>
+                <p class="price">€18</p>
+                <button class="button" onclick="redirigirPagament(250)">Comprar</button>
+            </div>
+
+            <div class="pack">
+                <img src="../img/credits-logo.png" alt="Paquet de crèdits">
+                <h3>Premium</h3>
+                <p>400 crèdits</p>
+                <p class="price">€28</p>
+                <button class="button" onclick="redirigirPagament(400)">Comprar</button>
+            </div>
+
+            <div class="pack">
+                <img src="../img/credits-logo.png" alt="Paquet de crèdits">
+                <h3>Elite</h3>
+                <p>600 crèdits</p>
+                <p class="price">€40</p>
+                <button class="button" onclick="redirigirPagament(600)">Comprar</button>
+            </div>
+
+            <div class="pack">
+                <img src="../img/credits-logo.png" alt="Paquet de crèdits">
+                <h3>MaxiPack</h3>
+                <p>1000 crèdits</p>
+                <p class="price">€60</p>
+                <button class="button" onclick="redirigirPagament(1000)">Comprar</button>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function redirigirPagament(credits) {
+            window.location.href = `formulariPagament.html?credits=${credits}`;
+        }
+    </script>
+    <script src="../js/consultaCredits.js" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+    <script type="module">
+        import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+        createChat({
+            webhookUrl: 'https://moutemess.app.n8n.cloud/webhook/67ebc1bc-344e-4dd5-8b28-5ad847889ee5/chat'
+        });
+    </script>
+</body>
+</html>

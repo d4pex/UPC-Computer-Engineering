@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sessió - Mou-te+</title>
+    <link rel="icon" href="../img/moute.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/estils.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-left">
+                <a href="../index.html">Inici</a>
+                <a href="mailto:moutemess@gmail.com">Contacte</a>
+            </div>
+            <div class="nav-right">
+                <a href="login.html">Iniciar Sessió</a>
+                <a href="registre.html">Registre</a>
+            </div>
+        </nav>
+    </header>
+    
+    <div class="login-container">
+        <h2>Iniciar Sessió</h2>
+
+        <!-- Missatge d'error o d'èxit a sobre del formulari -->
+        <div id="error-message" class="message-box"></div>
+
+        <form id="loginForm">        
+            <div class="form-group">
+                <label for="dni">DNI:</label>
+                <input type="text" id="dni" name="dni" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Contrasenya:</label>
+                <input type="password" id="password" name="contrasenya" required>
+            </div>
+
+            <button type="submit" class="btn">Iniciar Sessió</button>
+        </form>
+        
+        <p>No tens compte? <a href="registre.html">Registra't aquí</a></p>
+    </div>
+
+    <script src="../js/login.js"></script>
+</body>
+</html>

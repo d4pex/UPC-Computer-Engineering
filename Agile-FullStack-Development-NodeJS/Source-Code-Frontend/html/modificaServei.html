@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modificar Servei</title>
+    <link rel="icon" href="../img/moute.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/estils.css">
+</head>
+<body>
+<header>
+        <nav class="navbar">
+            <div class="nav-left">
+                <a href="dashboard.html">Inici</a>
+                <div class="dropdown">
+                  <a href="#" class="dropbtn">Serveis<span class="arrow">&#9660;</span></a>
+                  <div class="dropdown-content">
+                      <a href="seleccioPla.html">Selecció Pla</a>
+                      <a href="altaServei.html">Crea Servei</a>
+                      <a href="modificaServei.html">Modifica Servei</a>
+                      <a href="veureReserves.html">Reserves</a>
+                      <a href="visualitzacioServeis.html">Visualitzar Serveis</a>
+                  </div>
+                </div>
+                <a href="mailto:moutemess@gmail.com">Contacte</a>
+                <a href="valoracions.html">Valoracions</a>
+                <div class="dropdown">
+                    <a href="#" class="dropbtn">Gamificació i Comunitat<span class="arrow">&#9660;</span></a>
+                    <div class="dropdown-content">
+                        <a href="reptesDisponibles.html">Reptes Disponibles</a>
+                        <a href="reptesInscrits.html">Els meus Reptes</a>
+                        <a href="insignies.html">Les meves insignies</a>
+                    </div>
+                </div>
+                <a href="navegacioCataleg.html">Càtaleg</a>
+            </div>
+            <div class="nav-right">
+                <div class="credits-container">
+                    <img src="../img/credits-logo.png" alt="Logo de crèdits" class="credits-logo">
+                    <span id="creditos">0</span> <!-- Aquí se mostrarán los créditos -->
+                </div>
+                <a href="compraCredits.html">Compra Crèdits</a>
+                
+                <div class="dropdown">
+                    <a href="#" class="dropbtn">Perfil <span class="arrow">&#9660;</span></a> <!-- Flecha hacia abajo -->
+                    <div class="dropdown-content">
+                        <a href="perfil.html">Mi Perfil</a>
+                        <a href="historialCompres.html">Historial de Compres</a>
+                        <a href="logout.html">Tancar Sessió</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Campo para ingresar el título del servicio -->
+    <div id="buscarServeiDiv">
+        <label for="serveiTitol">Títol del Servei:</label>
+        <input type="text" id="serveiTitol" name="serveiTitol" placeholder="Introduir el títol del servei" required>
+        <button class="modifica" id="buscarServeiBtn">Modificar</button>
+    </div>
+
+    <!-- Contenedor para mostrar los servicios encontrados -->
+    <div id="serveisEncontrats" style="display: none;">
+        <h3>Resultats de la cerca:</h3>
+        <ul id="serveisList"></ul>
+    </div>
+
+    <!-- Formulario para modificar el servicio -->
+    <form id="modificarServeiForm" class="formulari" style="display:none;">
+      <h2 id="titolFormulari" style="display:none;">Modificar Servei</h2>    
+      <div class="container">
+        <!-- Columna esquerra -->
+        <div class="col-esquerra">
+          <div class="camp">
+            <label for="nom">Nom del Servei</label>
+            <input type="text" id="nom" name="nom" required>
+          </div>
+    
+          <div class="camp-descripcio">
+            <label for="descripcio">Descripció</label>
+            <textarea id="descripcio" name="descripcio" rows="6" required></textarea>
+          </div>
+        </div>
+    
+        <!-- Columna dreta -->
+        <div class="col-dreta">
+          <div class="camp">
+            <label for="dataHora">Data i Hora</label>
+            <input type="datetime-local" id="dataHora" name="dataHora" required>
+          </div>
+    
+          <div class="camp">
+            <label for="lloc">Ubicació</label>
+            <input type="text" id="lloc" name="lloc" required>
+          </div>
+    
+          <div class="camp">
+            <label for="preu">Preu</label>
+            <input type="number" id="preu" name="preu" required>
+          </div>
+    
+          <div class="camp">
+            <label for="duracio">Duració (minuts)</label>
+            <input type="number" id="duracio" name="duracio" required>
+          </div>
+    
+          <div class="camp">
+            <label for="capacitat">Capacitat</label>
+            <input type="number" id="capacitat" name="capacitat" required>
+          </div>
+    
+          <div class="camp">
+            <label for="tipus_servei">Tipus de Servei</label>
+            <select id="tipus_servei" name="tipus_servei" required>
+              <option value="">-- Selecciona un tipus --</option>
+              <option value="Esportiu">Esportiu</option>
+              <option value="Salut">Salut</option>
+              <option value="Benestar">Benestar</option>
+              <option value="Virtual">Virtual</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    
+      <div class="boto">
+        <button class="modifica" type="submit">Modificar Servei</button>
+      </div>
+    </form>
+    
+
+    <!-- Notificaciones -->
+    <div id="notification" class="notification hide">
+        <span id="notification-message"></span>
+    </div>
+    <script src="../js/consultaCredits.js"></script>
+    <script src="../js/modificaServei.js"></script>
+</body>
+</html>

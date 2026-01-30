@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registre - Mou-te+</title>
+    <link rel="icon" href="../img/moute.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/estils.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-left">
+                <a href="../index.html">Inici</a>
+                <a href="mailto:moutemess@gmail.com">Contacte</a>
+            </div>
+            <div class="nav-right">
+                <a href="login.html">Iniciar Sessió</a>
+                <a href="registre.html">Registre</a>
+            </div>
+        </nav>
+    </header>
+    
+    <div class="login-container">
+        <h2>Registra't</h2>
+        <div id="error-message" class="message-box"></div>
+        <form id="registreForm">        
+            <div class="form-group">
+                <label for="dni">DNI/NIE:</label>
+                <input type="text" id="dni" name="dni" required>
+            </div>
+
+            <div class="form-group">
+                <label for="nom">Nom:</label>
+                <input type="text" id="nom" name="nom" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="sobrenom">Sobrenom:</label>
+                <input type="text" id="sobrenom" name="sobrenom" required>
+            </div>
+
+            <div class="form-group">
+                <label for="mail">Correu Electrònic:</label>
+                <input type="email" id="mail" name="mail" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="telefon">Telèfon:</label>
+                <input type="text" id="telefon" name="telefon" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Contrasenya:</label>
+                <input type="password" id="password" name="contrasenya" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="rol">Rol:</label>
+                <select id="rol" name="rol" required>
+                    <option value="Usuari">Usuari</option>
+                    <option value="Professional">Professional</option>
+                    <option value="Centre">Centre</option>
+                </select>
+            </div>            
+            
+            <button type="submit" class="btn">Registrar-se</button>
+        </form>
+        
+        <p>Ja tens un compte? <a href="login.html">Inicia sessió aquí</a></p>
+    </div>  
+
+    <script src="../js/registre.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+</body>
+</html>
