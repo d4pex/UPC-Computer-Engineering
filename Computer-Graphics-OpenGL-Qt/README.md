@@ -1,46 +1,36 @@
-# Computer Engineering & Science Portfolio 🎓
+# Computer Graphics & 3D Engines (OpenGL/Qt) 🚀
 
-**Universitat Politècnica de Catalunya (UPC - BarcelonaTech)**
+## 🎨 Module Overview
+Practical implementation of the **3D Rendering Pipeline** from scratch using **C++**, the **Qt Framework**, and **Core OpenGL (3.3+)**. Unlike using game engines (Unity/Unreal), this module focuses on the low-level mathematics and logic behind rendering: Matrix transformations, GLSL Shader programming, and the event loop.
 
-This repository serves as a technical archive of the engineering projects developed during my B.S. in Computer Engineering. Unlike my [Security Portfolio](https://github.com/d4pex), this collection focuses on the **underlying computer science foundations**: low-level architecture, operating system internals, algorithm optimization, and software engineering.
+**Red Team & Game Hacking Relevance:**
+* **Game Hacking Fundamentals:** Understanding the **Model-View-Projection (MVP)** matrix multiplication is the physics behind **Aimbots** (World-to-Screen transformation).
+* **Reverse Engineering:** Knowledge of the graphics pipeline (Vertex vs Fragment shaders) and buffers (VBO/VAO) is essential for hooking graphics drivers (DirectX/OpenGL hooks) to create overlays or **Wallhacks** (disabling Z-Buffer testing).
 
-> **Security Perspective:** *You cannot secure what you do not understand.* This portfolio demonstrates deep knowledge of how systems work "under the hood"—from memory management in C to TCP/IP packet structures—providing the necessary background for advanced Exploit Development and Red Teaming.
+## 📂 Projects & Labs
 
-## 🗂️ Technical Domains
+### 1. 🧪 The Rendering Pipeline (Labs)
+* **Folders**: `Lab-1-Basic-Pipeline`, `Lab-2-Model-Loading-Cameras`, `Lab-3-Lighting-Materials`.
+* **Tech**: Vertex/Fragment Shaders (GLSL), `.obj` loading.
+* **Skills**:
+    * **Pipeline Setup**: Configuring the OpenGL context within a Qt Widget (`MyGLWidget`).
+    * **Camera Control**: Implementing Euler angles and LookAt matrices to navigate the 3D world.
+    * **Lighting Models**: Implementing **Phong Shading** (Ambient + Diffuse + Specular) manually in GLSL.
 
-### 1. ⚙️ Low-Level & OS Internals
-* **`Operating-Systems-Internals`** (C, Linux API):
-    * Implementation of **Syscalls** (`fork`, `exec`, `pipe`).
-    * Handling **Signals** and IPC (Inter-Process Communication).
-    * Custom Shell and Socket programming logic used in C2 development.
-* **`Computer-Architecture-Assembly`** (Assembly SISA-F):
-    * Direct hardware manipulation: Interrupts, MMIO (Memory Mapped I/O), and Stack management.
+### 2. 👻 Interactive Scenarios (Exams)
+* **Folders**: `Exam-Coin-Interaction-Session`, `Exam-Ghost-Animation-Session`.
+* **Focus**: User Interaction & Animation.
+* **Skills**:
+    * **Picking/Interaction**: Detecting mouse clicks on 3D objects (Ray casting logic) to collect coins.
+    * **Animation**: Using timer events (`QTimer`) to update transformation matrices over time (e.g., oscillating ghost movement).
 
-### 2. 🚀 High Performance & Graphics
-* **`Computer-Graphics-OpenGL-Qt`** (C++, OpenGL, GLSL):
-    * 3D Rendering Pipeline implementation from scratch.
-    * Shader programming (Vertex/Fragment) and Matrix transformations (MVP).
-* **`Parallel-Computing-HPC`** (C, OpenMP):
-    * Optimization of complex algorithms (**Mandelbrot**, **K-Means**) for multi-core processors.
-    * Analysis of **Race Conditions**, Speedup, and Amdahl's Law.
-
-### 3. 🌐 Distributed Systems & Networks
-* **`Computer-Networks-Protocols`** (Wireshark, Cisco/Mikrotik):
-    * Deep packet inspection (TCP/IP stack analysis).
-    * Wireless infrastructure design (802.11) and Routing protocols.
-* **`Distributed-Systems-AI`** (Erlang, Python):
-    * Implementation of consensus algorithms (**Raft**, **ISIS**) and logical clocks.
-    * Research on **Federated Learning** for privacy-preserving AI.
-
-### 4. 📱 Software Engineering & UX
-* **`Software-Engineering-Management`**: Agile methodologies (Scrum), UML Architecture design, and Requirements Engineering.
-* **`Human-Computer-Interaction-UX`**: User-Centered Design (UCD) prototyping for Healthcare and Enterprise applications.
+### 3. 🛸 Final Project: "Rick & Morty Scene"
+* **Folder**: `Project-Rick-And-Morty-Scene`
+* **Description**: A complete 3D scene composition featuring complex models and lighting interactions.
+* **Features**:
+    * **Multiple Shaders**: Switching shader programs at runtime for different effects.
+    * **Scene Graph**: Managing hierarchical transformations (e.g., a WatchTower with rotating parts).
+    * **Custom Assets**: Integration of external `.obj` and `.mtl` assets (Rick, Morty, Towers).
 
 ---
-### 🛠️ Tech Stack Summary
-| Domain | Technologies |
-| :--- | :--- |
-| **Languages** | C, C++, Erlang, Assembly, Python, Java |
-| **Systems** | Linux (Kernel API), Docker, Mikrotik RouterOS |
-| **Graphics** | OpenGL 3.3+, Qt Framework, GLSL |
-| **Tools** | Wireshark, OpenMP, Git, Tareador, Valgrind |
+*Tech Stack: C++, Qt 5/6, OpenGL 3.3 Core, GLSL (Shading Language), Linear Algebra.*
