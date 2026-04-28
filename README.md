@@ -2,7 +2,7 @@
 
 **Universitat Politècnica de Catalunya (UPC - BarcelonaTech)**
 
-This repository serves as a technical archive of the engineering projects developed during my B.S. in Computer Engineering. Unlike my [Security Portfolio](LINK_A_TU_OTRO_REPO), this collection focuses on the **underlying computer science foundations**: low-level architecture, operating system internals, algorithm optimization, and enterprise software architecture.
+This repository serves as a technical archive of the engineering projects developed during my B.S. in Computer Engineering. Unlike my [Security Portfolio](https://github.com/d4pex/ASIR-Cybersecurity-Labs), this collection focuses on the **underlying computer science foundations**: low-level architecture, operating system internals, algorithm optimization, and enterprise software architecture.
 
 > **Security Perspective:** *You cannot secure what you do not understand.* This portfolio demonstrates deep knowledge of how systems are built "under the hood"—from memory management in C++ to TCP/IP packet structures—providing the necessary background for advanced Exploit Development, Reverse Engineering, and Red Teaming.
 
